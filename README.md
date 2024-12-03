@@ -1,1 +1,1 @@
-# chat-gpt-entry-project
+# TEMPLATE
