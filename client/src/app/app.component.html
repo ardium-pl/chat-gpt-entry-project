@@ -1,1 +1,7 @@
-<p>Hello, world!</p>
+<div class="message-container">
+    <form form="message" [formGroup]="message" class="message-form">
+      <input formControlName="message" placeholder="Type your message" class="message-input" />
+      <button type="button" (click)="sendMessage()" class="send-button">Send Message</button>
+    </form>
+  </div>
+  

@@ -1,7 +1,14 @@
 :root {
-  --example-variable: 'example value';
-  // define css variables here
-  // remove the above variable after pasting the TEMPLATE
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --border-radius: 4px;
 }
 
 *,
@@ -9,18 +16,27 @@
 *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
+  font-size: var(--font-size-base);
 }
+
 body {
+  font-family: var(--body-font);
+  font-size: var(--font-size-base);
   line-height: 1.5;
+  background-color: var(--background-color);
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
+
 img,
 picture,
 video,
@@ -29,12 +45,16 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
+
 p,
 h1,
 h2,
@@ -43,15 +63,81 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
 button,
 a {
   cursor: pointer;
 }
+
 .hidden {
   display: none !important;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: var(--font-size-base);
+  transition: background-color 0.3s ease;
+
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
